@@ -15,8 +15,8 @@ func Init() {
 	if err != nil {
 		log.Fatal("Error loading .env file:", err)
 	}
-	p := strings.Replace(path, "cmd", "", -1)
-	p = fmt.Sprintf("%s.env", p)
+	p := strings.Replace(path, "/cmd", "", -1)
+	p = fmt.Sprintf("%s/.env", p)
 	err = godotenv.Load(p)
 	if err != nil {
 		log.Fatal("Error loading .env file:", err)
